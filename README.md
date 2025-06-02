@@ -12,7 +12,6 @@
       font-family: 'Baloo 2', cursive;
       color: #fff;
       text-align: center;
-      overflow-x: hidden;
     }
 
     h1 {
@@ -30,9 +29,10 @@
     .anggota-container {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 40px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 30px;
     }
 
     .anggota {
@@ -44,7 +44,6 @@
       transition: transform 0.3s ease, background 0.3s ease;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
       animation: bounceIn 1.5s ease;
-      position: relative;
     }
 
     .anggota:hover {
@@ -111,6 +110,8 @@
   <h1>Selamat Datang</h1>
   <h2>Manajemen Jaringan Komputer</h2>
 
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
   <div class="anggota-container">
     <div class="anggota" onclick="toggleNBI('nbi1')">
       <strong>Andi Pratama</strong>
@@ -121,14 +122,18 @@
       <div class="nbi" id="nbi2">1462300102</div>
     </div>
     <div class="anggota" onclick="toggleNBI('nbi3')">
-      <strong>Citra Lestari</strong>
-      <div class="nbi" id="nbi3">1462300103</div>
+      <strong>Neoriztinah Ratu Violiny</strong>
+      <div class="nbi" id="nbi3">1462300142</div>
     </div>
   </div>
 
   <script>
     function toggleNBI(id) {
       const el = document.getElementById(id);
+      const sound = document.getElementById("clickSound");
+      sound.currentTime = 0;
+      sound.play();
+
       if (el.style.display === 'block') {
         el.style.display = 'none';
       } else {
