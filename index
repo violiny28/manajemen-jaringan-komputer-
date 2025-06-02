@@ -121,22 +121,7 @@
       <div class="nbi" id="nbi2">1462300102</div>
     </div>
     <div class="anggota" onclick="toggleNBI('nbi3')">
-      <strong>Citra Lestari</strong>
-      <div class="nbi" id="nbi3">1462300103</div>
+      <strong>Neoriztinah ratu violiny</strong>
+      <div class="nbi" id="nbi3">1462300142</div>
     </div>
   </div>
-
-  <script>
-    function toggleNBI(id) {
-      const el = document.getElementById(id);
-      if (el.style.display === 'block') {
-        el.style.display = 'none';
-      } else {
-        el.style.display = 'block';
-        el.style.animation = 'fadeIn 0.5s ease-in-out';
-      }
-    }
-  </script>
-
-</body>
-</html>
